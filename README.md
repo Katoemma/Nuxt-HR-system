@@ -1,75 +1,82 @@
-# Nuxt 3 Minimal Starter
+# NUXT HR System
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a Human Resources (HR) system built with NUXT.js, integrated with Supabase as the backend, and designed with Tailwind CSS. The system aims to provide a comprehensive solution for managing various HR tasks efficiently.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- **User Authentication**: Secure user authentication and authorization powered by Supabase authentication.
+- **Employee Management**: Easily manage employee information, including personal details, employment history, and performance reviews.
+- **Leave Management**: Streamlined leave requests and approvals process, with customizable leave types and policies.
+- **Attendance Tracking**: Automated attendance tracking system to monitor employee attendance and generate reports.
+- **Payroll Processing**: Efficient payroll processing functionality to calculate and disburse employee salaries accurately.
+- **Reporting and Analytics**: Powerful reporting and analytics features to provide insights into HR performance.
 
-```bash
-# npm
-npm install
+## Demo
 
-# pnpm
-pnpm install
+To see the live demo of the NUXT HR System, please visit the following link:
 
-# yarn
-yarn install
+- [https://katohrsystem.netlify.app/](https://katohrsystem.netlify.app/)
 
-# bun
-bun install
-```
+## Prerequisites
 
-## Development Server
+- **Node.js**: A JavaScript runtime environment that allows you to run NUXT.js applications.
 
-Start the development server on `http://localhost:3000`:
+## Technologies Used
 
-```bash
-# npm
-npm run dev
+- **NUXT.js**: A powerful Vue.js framework for building server-side rendered applications.
+- **Supabase**: An open-source Firebase alternative for building and scaling projects with real-time and secure database functionality.
+- **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly and easily.
 
-# pnpm
-pnpm run dev
+## Getting Started
 
-# yarn
-yarn dev
+To get started with the NUXT HR System, follow these steps:
 
-# bun
-bun run dev
-```
+1. Clone the repository:
 
-## Production
+   ```bash
+   git clone https://github.com/yourusername/nuxt-hr-system.git
+   ```
 
-Build the application for production:
+2. Navigate to the project directory:
 
-```bash
-# npm
-npm run build
+   ```bash
+   cd nuxt-hr-system
+   ```
 
-# pnpm
-pnpm run build
+3. Install dependencies:
 
-# yarn
-yarn build
+   ```bash
+   npm install
+   ```
 
-# bun
-bun run build
-```
+4. Configure Supabase:
 
-Locally preview production build:
+   - Create a Supabase account and set up a new project.
+   - Obtain your Supabase URL and API key.
+   - Update the Supabase configuration in the project's environment variables.
 
-```bash
-# npm
-npm run preview
+5. Start the development server:
 
-# pnpm
-pnpm run preview
+   ```bash
+   npm run dev
+   ```
 
-# yarn
-yarn preview
+6. Access the HR system in your browser:
 
-# bun
-bun run preview
-```
+   ```bash
+   http://localhost:3000
+   ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to the NUXT HR System, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and ensure they follow the project's coding standards.
+4. Test your changes thoroughly.
+5. Submit a pull request with a detailed description of your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
