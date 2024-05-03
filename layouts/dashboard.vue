@@ -1,112 +1,190 @@
-<script setup>
-const supabase = useSupabaseClient();
+<script setup ">
+import avatar from '~/presets/lara/avatar';
 
-//function to logout
-const logout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-        console.log(error);
-    }else{
-        navigateTo('/login');
-    }
-};
+const visible = ref(false)
+const value1 = ref('')
+
+const user = {
+    fullname: 'Kato emmanuel',
+    avatar: 'https://yuwnpdigaavzpcztqhba.supabase.co/storage/v1/object/public/avatars/2024-03-09T18:09:39.677658.jpg'
+}
 
 </script>
+
 <template>
-    <div class="flex h-screen w-full bg-gray-100">
-        <!-- side bar -->
-        <div class="flex flex-col bg-white w-1/5 h-full border-r">
-            <!-- logo -->
-            <div class="flex items-center justify-center h-16 ">
-                <img src="/images/logo.png" class="w-10 h-10" width="50" height="50" alt="logo">
-                <h1 class="text-teal-600 px-4 font-bold text-xl">Kato HRMS</h1>
-            </div>
-
-            <!-- menu -->
-            <div class="flex flex-col px-4 py-4">
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-th-large pr-2"></i>Dashboard
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-users pr-2"></i>All Employees
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-th-large pr-2"></i>All Departments
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class=" fa fa-list-alt pr-2"></i>Attendance
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-credit-card pr-2"></i>Payroll
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-briefcase pr-2"></i>Jobs
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-clipboard pr-2"></i>Leaves
-                </NuxtLink>
-                <NuxtLink to="/" :active-class="bg - red - 500"
-                    class="flex items-center p-2.5 text-gray-700 hover:bg-teal-100 border border-l-4 border-white  hover:border-teal-500  rounded-r-lg mb-4">
-                    <i class="fa fa-gears pr-2"></i>Settings
-                </NuxtLink>
-
-            </div>
-
-        </div>
-
-        <!-- header and main content -->
-        <div class="flex flex-col w-full h-16 bg-white border-b border-gray-200">
-            <!-- header -->
-            <div class="flex justify-between itms-center p-4 w-full h-full bg-white">
-                <!-- greetings -->
-                <div class="flex ">
-                    <p class="text-lg">Good Morning, <span class="text-teal-600 font-bold">Kato Emmanuel</span></p>
-                </div>
-
-                <div class="flex gap-6 items-center">
-                    <!-- search input -->
-
-                    <input type="text" class="rounded-lg p-2 border" placeholder="Search">
-                    <!-- notification -->
-                    <button type="button"
-                        class="relative inline-flex items-center px-3 py-3 text-sm font-medium text-center text-white bg-gray-200 rounded-xl hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
-                    
-                        <span class="sr-only">Notifications</span>
-                        <i class="fa fa-bell text-gray-500 text-md"></i>
-                        <div
-                            class="absolute inline-flex items-center justify-center w-5 h-5 p-1 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 -end-1 ">
-                            8</div>
-                    </button>
-                    <!-- profile -->
-                    <div class="flex flex-col group">
-
-                        <img src="https://www.hollywoodreporter.com/wp-content/uploads/2024/02/Avatar__The_Last_Airbender_n_S1_00_13_15_10RC.jpgAvatar__The_Last_Airbender_n_S1_00_13_15_10RC-H-2024.jpg" class="w-10 h-10 rounded-full" alt="profile">
-                        
-                        <!-- links -->
-                        
-                            <div class="hidden  absolute right-2 -top-4  group-hover:flex flex-col w-48 py-2 mt-16 bg-white divide-y divide-gray-100 rounded-lg shadow-xl border">
-                                <NuxtLink to="/" class="px-4 py-2 hover:bg-gray-100"><i class="fa fa-user pr-2" ></i>Profile</NuxtLink>
-                                <NuxtLink to="/" class="px-4 py-2 hover:bg-gray-100"><i class="fa fa-gears pr-2" ></i>Settings</NuxtLink>
-                                <span @click="logout()" class="px-4 py-2 hover:bg-gray-100 text-red-400"><i class="fa fa-sign-out pr-2" ></i>Logout</span>
-                            </div>
-                        
+    <div class=" flex flex-col bg-gray-100 h-screen">
+        <Sidebar v-model:visible="visible">
+            <template #container="{ closeCallback }">
+                <div class="flex flex-col h-full bg-white">
+                    <div class="flex items-center justify-between px-4 pt-3 flex-shrink-0 mb-4">
+                        <span class="inline-flex items-center gap-2">
+                            <img src="/images/logo.png" class="w-12" alt="Company Logo">
+                            <span class="font-semibold text-2xl text-teal-600">HRMS System</span>
+                        </span>
+                        <span>
+                            <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined
+                                class="p-4"><i class="fa fa-times"></i></Button>
+                        </span>
                     </div>
+
+                    <div class="overflow-y-auto text-gray-600">
+                        <ul class="list-none p-3 m-0">
+                            <li>
+                                <div v-ripple v-styleclass="{
+                                    selector: '@next',
+                                    enterClass: 'hidden',
+                                    enterActiveClass: 'slidedown',
+                                    leaveToClass: 'hidden',
+                                    leaveActiveClass: 'slideup'
+                                }"
+                                    class="p-3 flex align-items-center justify-content-between text-600 cursor-pointer p-ripple">
+                                    <span class="font-medium">FAVORITES</span>
+                                    <i class="pi pi-chevron-down"></i>
+                                </div>
+                                <div class="list-none p-0 m-0 overflow-hidden">
+                                    <NuxtLink to="/" class="bg-teal-100 rounded">
+                                        <span v-ripple
+                                            class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                            <i class="fa fa-home mr-2"></i>
+                                            <span class="font-medium">Dashboard</span>
+                                        </span>
+                                    </NuxtLink>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-users mr-2"></i>
+                                    <span class="font-medium">All Employees</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-users mr-2"></i>
+                                    <span class="font-medium">All Departments</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-comments mr-2"></i>
+                                    <span class="font-medium">Attendance</span>
+                                    <span
+                                        class="inline-flex items-center justify-center ml-auto bg-teal-500 rounded-full w-8 h-8 text-white">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-calendar mr-2"></i>
+                                    <span class="font-medium">Payroll</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-cog mr-2"></i>
+                                    <span class="font-medium">Jobs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-cog mr-2"></i>
+                                    <span class="font-medium">Leaves</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a v-ripple
+                                    class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                    <i class="fa fa-cog mr-2"></i>
+                                    <span class="font-medium">Settings</span>
+                                </a>
+                            </li>
+                    </div>
+                    </li>
+                    </ul>
+
                 </div>
-
-
-            </div>
-            <slot />
-        </div>
-        <!-- main content -->
-
+                <div class="mt-auto text-gray-700">
+                    <hr class="mb-3 mx-3 border-top-1  surface-border border-gray-400" />
+                    <a v-ripple
+                        class="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                        <Avatar :image="user.avatar" shape="circle" />
+                        <span class="font-bold">{{ user.fullname }}</span>
+                    </a>
+                </div>
 
     </div>
-
 </template>
+</Sidebar>
+<div class="flex justify-between bg-white rounded-lg p-2 px-6 m-2 items-center">
+    <button class="bg-teal-500 h-10 w-10 rounded-full" @click="visible = true"><i
+            class="fa fa-bars text-xl text-white"></i>
+    </button>
+    <div class="flex flex-col">
+        <h3 class="text-sm text-teal-600">Good morning! 🌅</h3>
+        <h2 class="font-bold">Kato Emmanuel</h2>
+    </div>
+    <!-- company logo -->
+    <div class="flex items-center gap-2 px-4">
+        <img src="/images/logo.png" alt="logo" class="w-12 h-12">
+        <h1 class="text-2xl font-bold text-teal-600">HRMS System</h1>
+    </div>
+
+    <div class="flex justify-between items-center gap-8">
+        <!-- search -->
+        <IconField iconPosition="left">
+            <InputIcon class="fa fa-search"> </InputIcon>
+            <InputText v-model="value1" placeholder="Search" />
+        </IconField>
+        <!-- user info -->
+        <div class="flex gap-8">
+            <!-- notification -->
+            <button type="button"
+                class="relative inline-flex items-center text-sm font-medium text-center text-gray-700 rounded-lg  bg-gray-100 px-2">
+                <i class="fa fa-bell text-2xl"></i>
+                <div
+                    class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-green-500 border-2 border-white rounded-full -top-2 -end-3 ">
+                    20
+                </div>
+            </button>
+
+            <!-- messages -->
+            <button type="button"
+                class="relative inline-flex items-center text-sm font-medium text-center text-gray-500 rounded-lg  bg-gray-100 px-2">
+                <i class="fa fa-envelope text-2xl"></i>
+                <div
+                    class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-3 ">
+                    10
+                </div>
+            </button>
+            <!-- user avatar -->
+            <div class="flex bg-gray-100 p-1 px-2 rounded items-center">
+                <Avatar
+                    image="https://yuwnpdigaavzpcztqhba.supabase.co/storage/v1/object/public/avatars/2024-03-09T18:09:39.677658.jpg"
+                    class="mr-2" shape="circle" />
+                <div class="flex flex-col">
+                    <h3 class="text-sm">Kato emmanuel</h3>
+                    <h4 class="text-sm text-gray-500">Systems Coordinator</h4>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<slot />
+
+</div>
+</template>
+<style>
+.router-link-active {
+    background-color: #e6fffa;
+    border-radius: 0.25rem;
+}
+
+.router-link-exact-active {
+    background-color: #7319c7;
+    border-radius: 0.25rem;
+}
+</style>

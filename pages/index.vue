@@ -3,15 +3,22 @@ const route = useRoute()
 
 definePageMeta({
   middleware: ['auth'],
-  layout: 'test',
+  layout: 'dashboard',
 })
 
 </script>
 
 <template>
-  <div class=" flex flex-col m-2 bg-white p-2 rounded-lg shadow-lg">
+  <div class=" flex flex-col m-2  p-2 rounded-lg ">
 
-    <Button label="Check" icon="pi pi-check" />
-
+    <!-- cards grid -->
+    <Cardgroup />
+    <!-- Requests card -->
+    <div class="p-4 flex justify-between">
+      <Requestscard />
+      <Recruitmentcard />
+      <CalendarWidget />
+    </div>
+    
   </div>
 </template>
