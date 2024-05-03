@@ -2,6 +2,9 @@
 
 This is a Human Resources (HR) system built with NUXT.js, integrated with Supabase as the backend, and designed with Tailwind CSS. The system aims to provide a comprehensive solution for managing various HR tasks efficiently.
 
+
+![Supabase Logo](https://github.com/Katoemma/Nuxt-HR-system/blob/main/public/images/Untitled%20design.png)
+
 ## Features
 
 - **User Authentication**: Secure user authentication and authorization powered by Supabase authentication.
@@ -36,7 +39,7 @@ To get started with the NUXT HR System, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/nuxt-hr-system.git
+   git clone https://github.com/katoemma/nuxt-hr-system.git
    ```
 
 2. Navigate to the project directory:
