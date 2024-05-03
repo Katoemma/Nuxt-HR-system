@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@nuxtjs/supabase": "^1.2.1",
+    "@pinia/nuxt": "^0.5.1",
     "chart.js": "^4.4.2",
     "nuxt": "^3.11.2",
+    "pinia": "^2.1.7",
     "primevue": "^3.52.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     anonKey: process.env.SUPABASE_KEY,
   },
 
-  modules: ["@nuxtjs/supabase",'nuxt-primevue','@nuxtjs/tailwindcss'],
+  modules: ["@nuxtjs/supabase",'nuxt-primevue','@nuxtjs/tailwindcss','@pinia/nuxt'],
   primevue: {
     options: {
       unstyled: true,
