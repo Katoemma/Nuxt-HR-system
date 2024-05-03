@@ -49,13 +49,13 @@ const user = {
                                             <span class="font-medium">Dashboard</span>
                                         </span>
                                     </NuxtLink>
-                            <li>
-                                <a v-ripple
+                            <NuxtLink to="/employees">
+                                <span v-ripple
                                     class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                     <i class="fa fa-users mr-2"></i>
                                     <span class="font-medium">All Employees</span>
-                                </a>
-                            </li>
+                                </span>
+                            </NuxtLink>
                             <li>
                                 <a v-ripple
                                     class="flex items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">

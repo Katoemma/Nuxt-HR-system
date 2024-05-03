@@ -30,7 +30,7 @@ const notifications = [
                     :class="{ 'first:border-t-0': index === 0 }">
                     <div class="flex items-center justify-between px-4 py-2 " :class="notification.color">
                         <div class="flex items-center">
-                            <span class="text-xl" :class="notification.iconColor"><i
+                            <span class="text-xl bg-gray-100 p-2 mr-2 rounded-lg" :class="notification.iconColor"><i
                                     :class="`fa ${notification.icon}`"></i></span>
                             <div>
                                 <h3 class=" text-gray-800" v-text="notification.title"></h3>

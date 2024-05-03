@@ -1,7 +1,7 @@
 
 <template>
     <div class="card flex justify-content-center 1/3">
-        <Calendar v-model="date" inline showWeek yearTitle/>
+        <Calendar v-model="date" inline showWeek yearTitle />
     </div>
 </template>
 
