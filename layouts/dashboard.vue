@@ -13,13 +13,13 @@ const logout = async () => {
 
 </script>
 <template>
-    <div class="flex h-screen w-full bg-green-100">
+    <div class="flex h-screen w-full bg-gray-100">
         <!-- side bar -->
         <div class="flex flex-col bg-white w-1/5 h-full border-r">
             <!-- logo -->
-            <div class="flex items-center justify-center h-16 bg-teal-600">
+            <div class="flex items-center justify-center h-16 ">
                 <img src="/images/logo.png" class="w-10 h-10" width="50" height="50" alt="logo">
-                <h1 class="text-white px-4 font-bold text-xl">Kato HRMS</h1>
+                <h1 class="text-teal-600 px-4 font-bold text-xl">Kato HRMS</h1>
             </div>
 
             <!-- menu -->
