@@ -21,11 +21,13 @@ To see the live demo of the NUXT HR System, please visit the following link:
 
 - **Node.js**: A JavaScript runtime environment that allows you to run NUXT.js applications.
 
-## Technologies Used
+# Technologies Used
 
 - **NUXT.js**: A powerful Vue.js framework for building server-side rendered applications.
 - **Supabase**: An open-source Firebase alternative for building and scaling projects with real-time and secure database functionality.
 - **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly and easily.
+- **Pinia**: Integrate Pinia for state management in Vue.js applications.
+
 
 ## Getting Started
 
