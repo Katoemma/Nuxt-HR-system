@@ -14,8 +14,8 @@ const toggleStore = useMyToggleStore();
         </div>
         <!-- company logo -->
         <div class="flex items-center gap-2 px-4">
-            <img src="/images/logo.png" alt="logo" class="w-12 h-12">
-            <h1 class="text-2xl font-bold text-teal-600">HRMS System</h1>
+            <img src="/images/kijani.png" alt="logo" class=" h-12">
+           
         </div>
 
         <div class="flex justify-between items-center gap-8">
