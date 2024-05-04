@@ -11,7 +11,10 @@
 
         <div class="flex">
             <!-- add button -->
-            <Button label="Add" icon="fa fa-plus-circle" class="p-button-success mr-2" />
+            <NuxtLink to="/employees/new" class="bg-teal-600 text-white p-2 px-4 rounded-md mr-2 ">
+                <i class="fa fa-plus-circle mr-2"></i>
+                Add Employee
+            </NuxtLink>
             <!-- export button -->
             <Button label="Export" icon="pi pi-upload" class="p-button-help" />
         </div>

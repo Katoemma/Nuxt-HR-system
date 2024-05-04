@@ -4,6 +4,7 @@ export const useMyToggleStore = defineStore("myToggleStore", {
   state: () => ({
     isNotificationHidden: true,
     isSidebarHidden: false,
+    activeEmployeeTab:'personal info'
   }),
   actions: {
     toggleNotification() {
@@ -12,6 +13,11 @@ export const useMyToggleStore = defineStore("myToggleStore", {
     //toggle sidebar
     toggleSidebar() {
       this.isSidebarHidden = !this.isSidebarHidden; // toggle the state
+    },
+
+    //set active tab
+    setActiveTab(tabName){
+      this.activeEmployeeTab = tabName;
     }
     
   },
